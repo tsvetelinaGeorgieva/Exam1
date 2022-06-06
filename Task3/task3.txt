@@ -1,0 +1,19 @@
+//3.1
+// -> ps -a
+// -> ps aux
+
+//3.2 
+// -> mkdir "MMS C camp"
+// -> cp *.c ./MMS\ C\ camp
+// -> rm [0-9]*.*
+
+
+//3.3
+// -> chmod u=rwx ~/Desktop/testFile
+// -> chmod g=rx ~/Desktop/testFile
+// -> chmod o=r ~/Desktop/testFile
+
+//3.4
+// -> wc -l source1.c; wc -l source2.c
+// -> wc -l source1.c | cut -f1 -d ' '; wc -l source2.c | cut -f1 -d ' '
+// -> //wc -l source1.c | cut -f1 -d ' ' > lineCount; wc -l source2.c | cut -f1 -d ' ' >> lineCount
