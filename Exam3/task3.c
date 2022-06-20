@@ -90,7 +90,7 @@ void print(struct node_t *cll){
 }
 
 struct Node* insertAfter(struct Node* cll, int skipCount, int newElement){
-    if(skipCount < 0 || skipCount > 1 000 000){
+    if(skipCount < 0 || skipCount > 1000000){
         return;
     }
     node_t* n = malloc(sizeof(node_t));
