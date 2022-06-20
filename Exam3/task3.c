@@ -81,7 +81,7 @@ void listFree(node_t** list){
 void print(struct node_t *cll){
     node_t* first = *cll;
     while(first != NULL){
-        print("%d ", first->data);
+        printf("%d ", first->data);
         first = first->next;
         if(cll == first->next){
             return;
