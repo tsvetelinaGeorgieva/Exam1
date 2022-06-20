@@ -9,8 +9,7 @@ typedef struct Node {
 void print_list(node_t*);
 void push(node_t**, int);
 void listFree(node_t**);
-void print(struct node_t *);
-void print(struct node_t *);
+void print(node_t *);
 struct Node* insertAfter(struct Node*, int, int);
 
 
@@ -78,8 +77,8 @@ void listFree(node_t** list){
     *list = NULL;
 }
 
-void print(struct node_t *cll){
-    node_t* first = *cll;
+void print(node_t *cll){
+    node_t* first = cll;
     while(first != NULL){
         printf("%d ", first->data);
         first = first->next;
@@ -95,7 +94,7 @@ struct Node* insertAfter(struct Node* cll, int skipCount, int newElement){
     }
     node_t* n = malloc(sizeof(node_t));
     n->data = newElement;
-    node_t* current = *cll;
+    node_t* current = cll;
     node_t* prev = current;
     while(skipCount != 0){
         prev = current;
