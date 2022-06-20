@@ -10,7 +10,7 @@ void print_list(node_t*);
 void push(node_t**, int);
 void listFree(node_t**);
 void print(node_t *);
-struct Node* insertAfter(struct Node*, int, int);
+node_t* insertAfter(node_t*, int, int);
 
 
 int main(){
@@ -46,7 +46,7 @@ int main(){
 void push(node_t** list, int data){
     node_t* n = malloc(sizeof(node_t));
     n->data = data;
-    n->next = list;
+    n->next = *list;
     if (*list == NULL){
         *list = n;
         return;
@@ -88,9 +88,9 @@ void print(node_t *cll){
     }
 }
 
-struct Node* insertAfter(struct Node* cll, int skipCount, int newElement){
+node_t* insertAfter(node_t* cll, int skipCount, int newElement){
     if(skipCount < 0 || skipCount > 1000000){
-        return;
+        return -1;
     }
     node_t* n = malloc(sizeof(node_t));
     n->data = newElement;
